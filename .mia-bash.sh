@@ -1,4 +1,4 @@
-PS1='\n\d \t \$? \W\n 🌴 \[$(tput sgr0)\]'
+PS1='\n\d \t $(test $? -eq 0 && echo 🙆 || echo 🙅) \W\n 🌴 \[$(tput sgr0)\]'
 alias pls='sudo'
 alias please='sudo $(fc -ln -1)'
 alias aliases='cat ~/.bashrc | grep ^alias'
